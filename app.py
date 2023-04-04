@@ -8,6 +8,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 
 
+
 ## Definitions
 def remove_pattern(input_txt,pattern):
     r = re.findall(pattern,input_txt)
