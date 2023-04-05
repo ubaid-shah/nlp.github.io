@@ -11,3 +11,17 @@ Step 3: Create a Docker image for Gitlab Commumnity edition
 Step 4: Craete a Docker container for Gutlab
 
 ```docker run -d -p 443:443 -p 80:80 -p 22:22 --name gitlab_ml gitlab/gitlab-ce```
+
+
+Step 5: Create an image for python nlp
+```docker build -t sentiment-analysis-python:v001 . ```
+
+Step 6: Run the image and create the container
+```docker run -p 5000:4000 -d --name sentiment-analysis sentiment-analysis-python:v001```
+
+step 6: To move inside a container execute the following code
+```docker exec -it sentiment-analysis /bin/sh```
+```ls``` ----   to list the files
+```rm -r "foldername"```    to delete the folder with its content
+```ctrl d```    to exit from the container
+
